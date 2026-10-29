@@ -1,0 +1,16 @@
+{
+  "_note": "교육용 합성 데이터입니다. 실제 시설과 무관합니다.",
+  "today": "2026-10-29",
+  "rooms": [
+    { "id": "R-101", "name": "소담룸",   "capacity": 2,  "pricePerHour": 5000,  "floor": 1, "equipment": ["화이트보드"] },
+    { "id": "R-102", "name": "아늑룸",   "capacity": 4,  "pricePerHour": 8000,  "floor": 1, "equipment": ["화이트보드", "모니터"] },
+    { "id": "R-202", "name": "집중룸",   "capacity": 4,  "pricePerHour": 9000,  "floor": 2, "equipment": ["모니터"] },
+    { "id": "R-201", "name": "세미나룸", "capacity": 6,  "pricePerHour": 12000, "floor": 2, "equipment": ["프로젝터", "화이트보드"] },
+    { "id": "R-302", "name": "스튜디오", "capacity": 6,  "pricePerHour": 15000, "floor": 3, "equipment": ["프로젝터", "마이크"] },
+    { "id": "R-301", "name": "대강당룸", "capacity": 10, "pricePerHour": 20000, "floor": 3, "equipment": ["프로젝터", "마이크", "화이트보드"] }
+  ],
+  "booked": [
+    { "roomId": "R-102", "date": "2026-10-30", "start": "13:00", "end": "15:00" },
+    { "roomId": "R-201", "date": "2026-10-30", "start": "15:00", "end": "17:00" }
+  ]
+}

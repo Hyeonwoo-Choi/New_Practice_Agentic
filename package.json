@@ -1,0 +1,32 @@
+{
+  "name": "new-practice-agentic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agentic AI 학습 프로젝트 - 스터디룸 예약 도우미를 단계별로 만들며 배운다",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "begin": "tsx src/cli/begin.ts",
+    "play": "tsx src/cli/play.ts",
+    "check": "tsx src/cli/check.ts",
+    "experiment": "tsx src/cli/experiment.ts",
+    "hint": "tsx src/cli/hint.ts",
+    "solution": "tsx src/cli/solution.ts",
+    "status": "tsx src/cli/status.ts",
+    "view": "tsx src/cli/view.ts",
+    "lint:units": "tsx src/cli/lint-units.ts",
+    "typecheck": "tsc --noEmit",
+    "selftest": "tsx src/cli/selftest.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "1.2.14",
+    "@langchain/langgraph": "1.4.18"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

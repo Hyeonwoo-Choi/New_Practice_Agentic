@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+!.env.example
+# 실행 기록은 다시 만들 수 있다. 내 진도(progress/)와 내 코드(units/*/work)는 보존한다
+runs/
+*.log
