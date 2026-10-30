@@ -48,7 +48,12 @@ npx tsx units/u01-messages/example/ex1-single-call.ts
 
 답은 [03-concept.md](03-concept.md) 에서 배웁니다. 먼저 [02-prereq.md](02-prereq.md) 로 필요한 기초를 확인하세요.
 
-
 ---
 
-[← 이전](README.md) · [작성 위치 안내](00-workspace.md) · [다음 → 02-prereq.md](02-prereq.md)
+**챕터 3 / 13 · 문제 만나기**
+
+[← 이전 챕터: 작성 위치 안내](00-workspace.md)
+
+**[다음 챕터: 필요한 문법 →](02-prereq.md)**
+
+객체·배열·펼치기·await를 확인하세요.

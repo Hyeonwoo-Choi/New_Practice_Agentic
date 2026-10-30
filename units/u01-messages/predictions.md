@@ -45,7 +45,12 @@ P5:
 
 - (여기에 적기 — 모두 맞았다면 "다 맞음. 그래도 가장 자신 없었던 것은 ○○" 처럼 적어도 됩니다)
 
-
 ---
 
-[← 이전](04-example.md) · [작성 위치 안내](00-workspace.md) · [다음 → 05-implement.md](05-implement.md)
+**챕터 7 / 13 · 실행 전 예상 적기**
+
+[← 이전 챕터: 작동하는 예제 따라가기](04-example.md)
+
+**[다음 챕터: 기본 코드 구현 →](05-implement.md)**
+
+work/conversation.ts의 TODO 1·2를 작성하고 검사하세요.

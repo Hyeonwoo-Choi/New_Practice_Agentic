@@ -42,7 +42,12 @@
 
 (여기에 적기)
 
-
 ---
 
-[← 이전](08-recall-explain.md) · [작성 위치 안내](00-workspace.md) · [다음 → FEEDBACK.md](FEEDBACK.md)
+**챕터 12 / 13 · 내 말로 설명 쓰기**
+
+[← 이전 챕터: 설명 기준 확인](08-recall-explain.md)
+
+**[다음 챕터: 학습 피드백 남기기 →](FEEDBACK.md)**
+
+실제 시간과 불편했던 점을 쓰면 이번 단원이 끝납니다.

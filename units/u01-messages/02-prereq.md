@@ -37,7 +37,12 @@ function ask(history: Message[], question: string): Promise<Turn> { ... }
 
 1번은 `a` 가 그대로 `[1, 2]`, 2번은 `undefined` (아직 Promise 이기 때문) 입니다. 다르게 생각했다면 S1, S2 를 읽고 오세요.
 
-
 ---
 
-[← 이전](01-problem.md) · [작성 위치 안내](00-workspace.md) · [다음 → 03-concept.md](03-concept.md)
+**챕터 4 / 13 · 필요한 문법**
+
+[← 이전 챕터: 문제 만나기](01-problem.md)
+
+**[다음 챕터: 대화 기록 이해하기 →](03-concept.md)**
+
+역할 이름표와 기록이 쌓이는 순서를 읽으세요.

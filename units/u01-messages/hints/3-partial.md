@@ -23,3 +23,11 @@ export async function ask(history: Message[], question: string): Promise<Turn> {
 - `answer` 에 들어갈 값: `reply` 의 어느 속성인가요?
 
 그래도 막히면 15분이 지났는지 확인하고 `npm run solution -- u01` 을 봐도 됩니다. 보고 나서는 **닫고** 처음부터 다시 쓰세요.
+
+---
+
+**보조 경로 · 부분 코드 힌트**
+
+[← 이전 힌트: 순서 힌트](2-pseudo.md)
+
+**[기본 코드 구현 챕터로 돌아가기 →](../05-implement.md)**

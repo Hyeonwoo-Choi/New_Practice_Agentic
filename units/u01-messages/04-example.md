@@ -75,7 +75,12 @@ npx tsx units/u01-messages/example/ex2-followup.ts
 
 이제 [predictions.md](predictions.md)에 P1~P3을 적고 [05-implement.md](05-implement.md)로 넘어가세요.
 
-
 ---
 
-[← 이전](03-concept.md) · [작성 위치 안내](00-workspace.md) · [다음 → predictions.md](predictions.md)
+**챕터 6 / 13 · 작동하는 예제 따라가기**
+
+[← 이전 챕터: 대화 기록 이해하기](03-concept.md)
+
+**[다음 챕터: 실행 전 예상 적기 →](predictions.md)**
+
+이 파일의 P1·P2·P3에 예상값과 이유를 쓰세요.

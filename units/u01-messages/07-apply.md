@@ -62,7 +62,12 @@ npm run check -- u01 --apply
 
 - 이 서비스가 **재시작되면** alice 의 기록은 어떻게 될까? (힌트: 지금은 메모리에만 있다. 이 문제는 U06 에서 `thread_id` 와 checkpointer 로 다시 만납니다.)
 
-
 ---
 
-[← 이전](06-experiments.md) · [작성 위치 안내](00-workspace.md) · [다음 → 08-recall-explain.md](08-recall-explain.md)
+**챕터 10 / 13 · 두 사용자로 응용**
+
+[← 이전 챕터: 오류 실험 관찰](06-experiments.md)
+
+**[다음 챕터: 설명 기준 확인 →](08-recall-explain.md)**
+
+다음 챕터에 쓸 설명의 기준을 읽으세요.

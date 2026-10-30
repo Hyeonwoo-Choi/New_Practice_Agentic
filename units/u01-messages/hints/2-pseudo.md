@@ -23,3 +23,13 @@ ask(history, question):
 - `answer` 는 `reply` 객체 전체가 아니라 `reply.content` 입니다.
 
 (다음 단계: `npm run hint -- u01 3` → 부분 코드)
+
+---
+
+**보조 경로 · 순서 힌트**
+
+[← 이전 힌트: 개념 힌트](1-concept.md)
+
+[다음 힌트: 부분 코드 힌트 →](3-partial.md)
+
+**[기본 코드 구현 챕터로 돌아가기 →](../05-implement.md)**

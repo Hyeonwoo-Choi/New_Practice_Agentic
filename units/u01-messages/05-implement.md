@@ -79,7 +79,12 @@ npm run view                # 학습 화면: 실행 단계를 하나씩 보기
 
 통과했다면 [06-experiments.md](06-experiments.md) 로.
 
-
 ---
 
-[← 이전](predictions.md) · [작성 위치 안내](00-workspace.md) · [다음 → 06-experiments.md](06-experiments.md)
+**챕터 8 / 13 · 기본 코드 구현**
+
+[← 이전 챕터: 실행 전 예상 적기](predictions.md)
+
+**[다음 챕터: 오류 실험 관찰 →](06-experiments.md)**
+
+P4 예상 → e1 실행 → 회고 3 작성 순서로 진행하세요.

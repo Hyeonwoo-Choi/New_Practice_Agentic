@@ -125,7 +125,12 @@ const next = [...history, { role: "user", content: question }]; // history 는 �
 
 이 단원에서는 삭제나 요약 없이 **두 번의 대화를 빠짐없이 이어 보내는 것**만 연습합니다.
 
-
 ---
 
-[← 이전](02-prereq.md) · [작성 위치 안내](00-workspace.md) · [다음 → 04-example.md](04-example.md)
+**챕터 5 / 13 · 대화 기록 이해하기**
+
+[← 이전 챕터: 필요한 문법](02-prereq.md)
+
+**[다음 챕터: 작동하는 예제 따라가기 →](04-example.md)**
+
+첫 호출 → 답 저장 → 이어 묻기 순서로 예제를 보세요.
