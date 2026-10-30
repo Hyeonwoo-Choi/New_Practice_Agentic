@@ -50,7 +50,7 @@ npx tsx units/u01-messages/example/ex1-single-call.ts
 
 ---
 
-**챕터 3 / 13 · 문제 만나기**
+**챕터 3 / 14 · 문제 만나기**
 
 [← 이전 챕터: 작성 위치 안내](00-workspace.md)
 

@@ -39,7 +39,7 @@ function ask(history: Message[], question: string): Promise<Turn> { ... }
 
 ---
 
-**챕터 4 / 13 · 필요한 문법**
+**챕터 4 / 14 · 필요한 문법**
 
 [← 이전 챕터: 문제 만나기](01-problem.md)
 

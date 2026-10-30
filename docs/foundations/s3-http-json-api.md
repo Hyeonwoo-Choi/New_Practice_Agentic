@@ -1,5 +1,8 @@
 # S3. HTTP · JSON · API (보충)
 
+> **읽고 확인하는 보충 문서입니다.** 확인 질문은 말이나 개인 노트로 답하면 됩니다. 코드로 연습하려면 [자유 연습장](../../units/u01-messages/example/scratch.ts)을 사용하세요. 이 문서에 실행 코드를 쓰지 않습니다.
+
+
 모델을 부른다는 것은 **인터넷의 서버에 요청(request)을 보내고 응답(response)을 받는 것**입니다. 이 프로젝트의 `chat()` 이 대신해 주지만, 안에서 무슨 일이 일어나는지는 알아야 합니다.
 
 ## 요청과 응답
@@ -46,3 +49,9 @@ POST {LLM_BASE_URL}/chat/completions
 
 1. 요청 본문에서 `messages` 를 빼고 질문 한 줄만 보내면 서버는 이전 질문을 알까? (모른다)
 2. `JSON.parse` 의 입력은 객체인가, 글자인가? (글자)
+
+---
+
+[← S2 async/await](s2-async-await.md)
+
+[다음 챕터: U01 시작 →](../../units/u01-messages/README.md)

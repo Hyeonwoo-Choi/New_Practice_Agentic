@@ -127,7 +127,7 @@ const next = [...history, { role: "user", content: question }]; // history 는 �
 
 ---
 
-**챕터 5 / 13 · 대화 기록 이해하기**
+**챕터 5 / 14 · 대화 기록 이해하기**
 
 [← 이전 챕터: 필요한 문법](02-prereq.md)
 

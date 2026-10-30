@@ -1,5 +1,8 @@
 # S2. async / await (보충)
 
+> **읽고 확인하는 보충 문서입니다.** 확인 질문은 말이나 개인 노트로 답하면 됩니다. 코드로 연습하려면 [자유 연습장](../../units/u01-messages/example/scratch.ts)을 사용하세요. 이 문서에 실행 코드를 쓰지 않습니다.
+
+
 모델 호출은 **시간이 걸립니다.** (네트워크 요청이 가고 응답이 올 때까지.) 그동안 프로그램 전체가 멈추면 안 되니, JavaScript 는 "나중에 도착할 값" 을 **Promise(약속)** 로 다룹니다.
 
 ## 핵심 두 줄
@@ -59,3 +62,11 @@ try {
 
 1. `const r = getNumber()` 의 `r` 은? (Promise)
 2. 일반 함수 안에서 `await` 를 쓰면? (문법 오류)
+
+---
+
+[← S1 객체·배열](s1-objects-functions.md)
+
+[다음 보충: S3 HTTP·JSON·API →](s3-http-json-api.md)
+
+[보충이 필요 없다면 U01 시작 →](../../units/u01-messages/README.md)

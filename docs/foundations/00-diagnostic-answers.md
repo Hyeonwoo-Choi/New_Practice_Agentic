@@ -15,3 +15,13 @@
 | C3 | 코드는 공유·저장되기 쉬워 키가 새어 나가기 때문 | 환경변수(`.env`)에 두고 코드에는 쓰지 않는다 |
 | D1 | `Message[]`: Message 객체들의 배열이라는 타입 표시. `Promise<Turn>`: 나중에 Turn 이 도착한다는 약속 | 타입 표시는 실행에 영향이 없고 편집기가 실수를 알려 준다 |
 | D2 | `npm run` 의 옵션이 아니라 **뒤의 값을 스크립트에 넘기라** 는 뜻 | `npm run check -- u01` 의 `u01` 이 스크립트로 전달된다 |
+
+---
+
+[← 진단 문제](00-diagnostic.md)
+
+모르는 영역만 읽으세요: [S1 객체·배열](s1-objects-functions.md) · [S2 기다리기](s2-async-await.md) · [S3 요청·응답](s3-http-json-api.md)
+
+[다음 챕터: U01 시작 →](../../units/u01-messages/README.md)
+
+전부 이해했다면 보충을 건너뛰어도 됩니다.

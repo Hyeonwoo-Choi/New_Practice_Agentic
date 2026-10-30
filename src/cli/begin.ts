@@ -30,3 +30,6 @@ if (!fs.existsSync(work)) {
   console.log(`  처음 상태가 필요하면:  npm run begin -- ${id.split("-")[0]} --fresh-copy   (내 작업은 지워지지 않습니다)`);
 }
 console.log(`\n다음: ${rel(path.join(unitDir(id), "README.md"))} 를 열고 순서대로 진행하세요.`);
+console.log(`작성 위치 안내: ${rel(path.join(unitDir(id), "00-workspace.md"))}`);
+console.log(`코드 작성: ${rel(path.join(work, "conversation.ts"))} 의 TODO(U01-1), TODO(U01-2). 파일을 저장한 뒤 검사합니다.`);
+console.log("설명 문서는 읽고, 예측은 predictions.md, 실행 후 설명은 reflection.md에 적습니다.");

@@ -77,7 +77,7 @@ npx tsx units/u01-messages/example/ex2-followup.ts
 
 ---
 
-**챕터 6 / 13 · 작동하는 예제 따라가기**
+**챕터 6 / 14 · 작동하는 예제 따라가기**
 
 [← 이전 챕터: 대화 기록 이해하기](03-concept.md)
 

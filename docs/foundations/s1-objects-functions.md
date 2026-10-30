@@ -1,5 +1,8 @@
 # S1. 객체 · 배열 · 함수 · 타입 표시 (보충)
 
+> **읽고 확인하는 보충 문서입니다.** 확인 질문은 말이나 개인 노트로 답하면 됩니다. 코드로 연습하려면 [자유 연습장](../../units/u01-messages/example/scratch.ts)을 사용하세요. 이 문서에 실행 코드를 쓰지 않습니다.
+
+
 U01~U03 에서 쓰는 만큼만 다룹니다. 5~10분.
 
 ## 객체: 이름 붙은 값 묶음
@@ -68,3 +71,9 @@ npm run check -- u01
 ## 확인 문제
 
 `const list = [1,2,3]; const next = [...list, 4];` 일 때 `list.length` 와 `next.length` 는? (3, 4)
+
+---
+
+[다음 보충: S2 async/await →](s2-async-await.md)
+
+[보충이 필요 없다면 U01 시작 →](../../units/u01-messages/README.md)
