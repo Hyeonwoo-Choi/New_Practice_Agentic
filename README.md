@@ -1,5 +1,8 @@
 # New Practice Agentic — 스터디룸 예약 도우미로 배우는 Agentic AI
 
+> **어디에 무엇을 쓰나요?** [U01 작성 위치 안내](units/u01-messages/00-workspace.md)에서 읽을 문서, 실행 예제, 내 코드, 예측·회고 작성 위치로 바로 이동하세요.
+
+
 코드를 따라 치는 대신, **개념을 이해하고 핵심 코드를 직접 쓰고 다른 상황에 적용하는** 학습 프로젝트입니다.
 TypeScript · LangGraph.js. 외부 서비스와 API 키 없이 시작할 수 있습니다.
 

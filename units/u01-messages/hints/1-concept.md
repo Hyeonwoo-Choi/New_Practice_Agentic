@@ -1,5 +1,10 @@
 # 힌트 1단계 — 개념
 
+> **힌트는 읽는 곳입니다.** 여기에 답을 쓰지 마세요. 실제 코드는 [work/conversation.ts](../work/conversation.ts)의 해당 TODO 안에 씁니다. work가 없으면 `npm run begin -- u01`을 실행하세요.
+
+[작성 위치 안내](../00-workspace.md) · [구현 안내로 돌아가기](../05-implement.md)
+
+
 코드 없이 생각의 방향만 드립니다.
 
 - 모델은 **받은 messages 배열만** 봅니다. 지난 호출은 모릅니다.

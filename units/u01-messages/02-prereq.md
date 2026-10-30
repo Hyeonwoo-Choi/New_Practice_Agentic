@@ -1,5 +1,16 @@
 # 2. 선수 지식 (짧게)
 
+> **지금 하는 일: 문법 확인 · 작성 없음**
+>
+> 아래 확인 질문은 머릿속으로 풀어도 됩니다. 연습해 보고 싶다면 [scratch.ts](example/scratch.ts)에만 적으세요.
+
+**이렇게 생각해 보세요:** `const old = ["첫 질문"]; const next = [...old, "첫 답"];`에서 ...old는 기존 내용을 펼쳐 넣습니다. old는 그대로이고 next에만 답이 추가됩니다.
+
+[작성 위치 안내](00-workspace.md) · [단원 목차](README.md) · [실행 예제](example/ex2-followup.ts)
+
+---
+
+
 이 단원 코드를 읽고 쓰려면 아래 네 가지가 필요합니다. 이미 아는 항목은 건너뛰세요. 낯설면 링크의 보충 단원을 먼저 읽으세요 (각 5분).
 
 | 필요한 것 | 이 단원에서 쓰이는 곳 | 보충 |
@@ -25,3 +36,8 @@ function ask(history: Message[], question: string): Promise<Turn> { ... }
 2. `await` 를 빼먹고 `const r = chat(msgs); console.log(r.content)` 를 하면 무엇이 찍힐까?
 
 1번은 `a` 가 그대로 `[1, 2]`, 2번은 `undefined` (아직 Promise 이기 때문) 입니다. 다르게 생각했다면 S1, S2 를 읽고 오세요.
+
+
+---
+
+[← 이전](01-problem.md) · [작성 위치 안내](00-workspace.md) · [다음 → 03-concept.md](03-concept.md)

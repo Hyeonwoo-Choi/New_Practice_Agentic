@@ -1,5 +1,10 @@
 # 힌트 3단계 — 부분 코드
 
+> **힌트는 읽는 곳입니다.** 여기에 답을 쓰지 마세요. 실제 코드는 [work/conversation.ts](../work/conversation.ts)의 해당 TODO 안에 씁니다. work가 없으면 `npm run begin -- u01`을 실행하세요.
+
+[작성 위치 안내](../00-workspace.md) · [구현 안내로 돌아가기](../05-implement.md)
+
+
 `___` 자리를 채우세요. 정답 전체가 아니라 뼈대입니다.
 
 ```ts
