@@ -1,0 +1,7 @@
+import type { Message } from "@lib/types";
+
+export function makeMessage(text: string): Message {
+// EDIT-BEGIN
+return 7;
+// EDIT-END
+}

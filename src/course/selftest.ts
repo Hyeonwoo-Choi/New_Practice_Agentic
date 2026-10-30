@@ -6,6 +6,7 @@ import path from "node:path";
 import { spawn, spawnSync } from "node:child_process";
 import { ROOT } from "../lib/paths.js";
 import { steps, sourceFor } from "./steps.js";
+import { Draft, validate } from "./editor.js";
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "terminal-course-test-"));
 const work = path.join(tmp, "practice");
@@ -46,7 +47,7 @@ function session() {
     }
   };
   return {
-    child, wait,
+    child, wait, output: () => output,
     async send(lines: string, expected: string) { const from = output.length; child.stdin.write(lines + "\n"); await wait(expected, from); },
     async quit() {
       const exit = new Promise<number | null>(resolve => child.once("exit", resolve));
@@ -79,6 +80,23 @@ try {
   write(7, bodies[7]);
   console.log("✔ 고정 답·원본 변경·답 누락·사용자 기록 누락을 검사에서 검출");
 
+  const edit = new Draft(sourceFor(steps[0]));
+  const originalLines = [...edit.lines];
+  edit.set(1, bodies[0]); edit.insert(2, "// 추가 줄"); edit.delete(2); edit.undo();
+  assert.equal(edit.lines[1], "// 추가 줄");
+  edit.undo(); edit.undo();
+  assert.throws(() => edit.undo(), /되돌릴/);
+  assert.deepEqual(edit.lines, originalLines);
+  assert.throws(() => edit.set(0, "잘못된 줄"));
+  assert.throws(() => edit.delete(2, 1));
+  edit.replace(['export function makeMessage(text: string): Message']);
+  assert.match(validate(path.join(work, steps[0].id + ".ts"), edit.source)[0].message, /함수 안/);
+  edit.replace(["return 7;"]);
+  assert(validate(path.join(work, steps[0].id + ".ts"), edit.source).some(x => x.message.includes("TS2322")));
+  edit.replace([bodies[0]]);
+  assert.deepEqual(validate(path.join(work, steps[0].id + ".ts"), edit.source), []);
+  console.log("✔ 줄 교체·삽입·삭제·되돌리기 및 저장 전 함수 선언 중복·타입 검사 검증");
+
   // 실제 입력 흐름: 실패 → 수정 → 같은 프로세스에서 재검사 → 이동 → 재시작.
   fs.writeFileSync(path.join(work, steps[0].id + ".ts"), sourceFor(steps[0]));
   const a = session();
@@ -87,10 +105,17 @@ try {
   const original = fs.readFileSync(path.join(work, steps[0].id + ".ts"), "utf8");
   await a.send(":edit\nreturn 7;\n:cancel", "입력 취소");
   assert.equal(fs.readFileSync(path.join(work, steps[0].id + ".ts"), "utf8"), original);
-  await a.send(":edit\nreturn {\n:save", "저장했습니다.");
-  await a.send(":check", "TransformError");
-  await a.send(":edit\n" + bodies[0] + "\n:save", "저장했습니다.");
-  await a.send(":check", "통과. :next");
+  await a.send(":edit\nreturn {\n:save", "[저장하지 않았습니다]");
+  assert.equal(fs.readFileSync(path.join(work, steps[0].id + ".ts"), "utf8"), original);
+  await a.send(':set 1 export function makeMessage(text: string): Message\n:save', "함수 안에 함수 선언문");
+  await a.send(":set 1 return 7;\n:save", "TS2322");
+  await a.send(':set 1 return { role: "user", content: "고정" };\n:save', "수정 필요.");
+  assert(a.output().includes("기대:") && a.output().includes("실제:") && a.output().includes("고칠 부분:"));
+  await a.send(":edit\n:set 1 " + bodies[0] + "\n:insert 2 // 임시 주석\n:delete 2\n:undo\n:delete 2\n:save", "통과. :try");
+  await a.send(':edit\n:paste\nreturn {\n  role: "user",\n  content: text\n};\n:done\n:save', "통과. :try");
+  assert(fs.readFileSync(path.join(work, steps[0].id + ".ts"), "utf8").includes('  content: text'));
+  await a.send(":try 내가 넣은 새 글", "추가 입력 실험 완료");
+  assert(a.output().includes("실제 반환값:") && a.output().includes("내가 넣은 새 글"));
   await a.send(":next", "2/8 ·");
   await a.quit();
   assert.equal(JSON.parse(fs.readFileSync(env.COURSE_PROGRESS_FILE, "utf8")).index, 1);
@@ -98,7 +123,7 @@ try {
   const b = session();
   await b.wait("2/8 ·");
   await b.quit();
-  console.log("✔ 터미널 코드 입력·취소·저장·문법 오류 수정·재검사·이동·백업·재시작 검증");
+  console.log("✔ 실제 터미널 줄 편집·취소·잘못된 저장 차단·자동 실행 비교·추가 입력·이동·백업·재시작 검증");
 
   fs.writeFileSync(env.COURSE_PROGRESS_FILE, JSON.stringify({ index: 8 }));
   const c = session();

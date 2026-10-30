@@ -1,0 +1,7 @@
+import type { Message } from "@lib/types";
+
+export function makeMessage(text: string): Message {
+// EDIT-BEGIN
+  throw new Error("사용자 메시지 객체를 반환하세요");
+// EDIT-END
+}
