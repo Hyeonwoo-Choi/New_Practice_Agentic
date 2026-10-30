@@ -46,9 +46,9 @@ const main = g("main");
 console.log(`\n── 요약: 기본 ${main.passed}/${main.total} 통과${withApply ? ` · 응용 ${g("apply").passed}/${g("apply").total} 통과` : ""}`);
 console.log(`── 실행 기록: ${runs.length}개 (학습 화면과 같은 기록)  → npm run view`);
 if (main.passed < main.total) console.log(`── 막히면: npm run hint -- ${id.split("-")[0]} 1   (힌트 1단계: 개념)`);
-else if (!withApply) console.log(`── 다음: ${rel(path.join(unitDir(id), "06-experiments.md"))} → 오류 실험 후 07-apply.md 순서로 진행하세요.`);
-else if (results.every((r) => r.pass)) console.log(`── 다음: ${rel(path.join(unitDir(id), "08-recall-explain.md"))} → reflection.md → FEEDBACK.md → 09-finish.md 순서로 마무리하세요.`);
-console.log("── 통과는 '동작을 확인했다' 는 뜻이지 '이해했다' 는 뜻이 아닙니다. predictions.md 와 reflection.md 도 채워 주세요.");
+else if (!withApply) console.log("── 현재 문제집과 터미널 실습: npm run learn. MD 경로: docs/course/00-start.md");
+else if (results.every((r) => r.pass)) console.log("── 현재 실습으로 이어가기: npm run learn");
+console.log("── 이 명령은 기존 work 코드용 호환 검사입니다. 현재 선형 실습은 npm run learn에서 진행합니다.");
 
 const groupsDone: Record<string, { passed: number; total: number }> = { main };
 if (withApply) groupsDone.apply = g("apply");

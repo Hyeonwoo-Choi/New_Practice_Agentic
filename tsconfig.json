@@ -12,5 +12,5 @@
     "baseUrl": ".",
     "paths": { "@lib/*": ["src/lib/*"] }
   },
-  "include": ["src/**/*.ts", "units/**/*.ts", "solutions/**/*.ts"]
+  "include": ["src/**/*.ts", "units/**/*.ts", "solutions/**/*.ts", "practice/**/*.ts"]
 }

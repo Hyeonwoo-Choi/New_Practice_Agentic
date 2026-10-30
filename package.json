@@ -8,6 +8,8 @@
     "node": ">=22"
   },
   "scripts": {
+    "learn": "tsx src/cli/learn.ts",
+    "selftest:course": "tsx src/course/selftest.ts",
     "begin": "tsx src/cli/begin.ts",
     "play": "tsx src/cli/play.ts",
     "check": "tsx src/cli/check.ts",

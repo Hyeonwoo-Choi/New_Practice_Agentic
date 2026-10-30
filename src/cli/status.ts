@@ -1,19 +1,13 @@
-/** npm run status — 단원별 진도를 네 가지로 나눠 보여 준다 */
-import { loadUnit, unitIds } from "../lib/registry.js";
-import { computeStatus } from "../lib/status.js";
-
-const mark = (s: string) => ({ none: "·  아직", partial: "◐  일부", pass: "●  통과", done: "●  완료" })[s] ?? s;
-
-console.log("\n단원별 진도 (각 항목은 따로 봅니다. 어느 하나도 '이해 완료' 를 뜻하지 않습니다)\n");
-for (const id of unitIds()) {
-  const s = computeStatus(await loadUnit(id));
-  console.log(`■ ${s.title}  (목표 ${s.minutes}분)`);
-  console.log(`   자동 테스트     ${mark(s.autoTest.state)}   ${s.autoTest.passed}/${s.autoTest.total}${s.autoTest.failed.length ? `  실패: ${s.autoTest.failed.join(", ")}` : ""}`);
-  const pr = s.predictions;
-  const when = pr.writtenBeforeFirstRun === null ? "" : pr.writtenBeforeFirstRun ? " · 첫 실행 전에 작성" : " · 첫 실행 뒤에 작성(참고용)";
-  console.log(`   예측            ${pr.answered}/${pr.total} 작성${when}`);
-  for (const r of pr.rows.filter((r) => r.match !== undefined)) console.log(`      ${r.match ? "✔" : "✘"} ${r.id} 내 예측 ${r.guess} / 실제 ${r.actual}`);
-  console.log(`   회고            ${mark(s.reflection.state)}   ${s.reflection.left ? `비어 있는 칸 ${s.reflection.left}` : ""}`);
-  console.log(`   응용 문제       ${mark(s.apply.state)}   ${s.apply.passed}/${s.apply.total}`);
-  console.log(`   사용한 힌트     ${s.hints.count ? `최대 ${s.hints.max}단계 (${s.hints.count}번 확인)` : "없음"}${s.solutionViews ? ` · 정답 ${s.solutionViews}번 열람` : ""}\n`);
-}
+/** 현재 선형 실습의 저장된 위치를 표시한다. */
+import fs from "node:fs";
+import path from "node:path";
+import { ROOT } from "../lib/paths.js";
+import { steps } from "../course/steps.js";
+const file = process.env.COURSE_PROGRESS_FILE ?? path.join(ROOT, "progress", "course.json");
+let index = 0;
+let finalRun = false;
+try { const state = JSON.parse(fs.readFileSync(file, "utf8")); if (Number.isInteger(state.index) && state.index >= 0 && state.index <= steps.length) index = state.index; finalRun = state.finalRun === true; } catch { /* 첫 실행 */ }
+console.log(index === steps.length ? (finalRun ? "저장된 위치: 코드 실습과 최종 실행 통과." : "저장된 위치: 8개 코드 실습 통과. :run으로 최종 실행이 남았습니다.") : "저장된 위치: " + (index + 1) + "/" + steps.length + " · " + steps[index].title);
+console.log("이 표시는 마지막으로 저장된 이동 위치입니다. 코드 수정 뒤에는 :check로 다시 검사하세요.");
+console.log("계속하기: npm run learn");
+console.log("문제집: docs/course/" + (index === steps.length ? "09-finish" : steps[index].id) + ".md");
